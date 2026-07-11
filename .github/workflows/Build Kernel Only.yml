@@ -477,8 +477,6 @@ jobs:
           ls -lh vmlinux
           echo -e "\n==== 打印DWARF/BTF调试段 ===="
           readelf -S vmlinux | grep -E "debug|BTF"
-          echo -e "\n==== 核对内核调试配置 ===="
-          grep -E "DEBUG_INFO|BTF" ../.config
 
           
       - name: "📦 Package Kernel | 打包内核"

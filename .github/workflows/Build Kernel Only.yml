@@ -144,8 +144,8 @@ jobs:
       - name: Install BTF & DWARF build dependencies
         run: |
           sudo apt update -y
-          sudo apt install -y dwarves-tools libelf-dev bison flex gcc-aarch64-linux-gnu g++-aarch64-linux-gnu binutils
-
+          sudo apt install -y dwarves libelf-dev bison flex gcc-aarch64-linux-gnu g++-aarch64-linux-gnu binutils
+          
       - name: "🚀 Maximize Build Space | 最大化构建空间"
         if: ${{ github.event.inputs.KERNEL_VERSION == '5.10' || github.event.inputs.KERNEL_VERSION == '5.15' }}
         uses: easimon/maximize-build-space@master
